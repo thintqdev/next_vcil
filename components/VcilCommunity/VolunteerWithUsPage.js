@@ -22,7 +22,7 @@ const VolunteerWithUsPage = () => {
       </div>
       <div className="w-full lg:w-1/3 flex justify-center lg:justify-end">
         <Image
-          src="images/placeholder.png"
+          src="/images/placeholder.png"
           alt="Placeholder"
           width={150}
           height={150}

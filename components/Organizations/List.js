@@ -4,52 +4,52 @@ const OrganizationsList = () => {
     const organizations = [
         {
             name: "Organization One",
-            logo: "https://placehold.co/600x400",
+            logo: "/images/placeholder.png",
             url: "https://organization-one.com",
         },
         {
             name: "Organization Two",
-            logo: "https://placehold.co/600x400",
+            logo: "/images/placeholder.png",
             url: "https://organization-two.com",
         },
         {
             name: "Organization Three",
-            logo: "https://placehold.co/600x400",
+            logo: "/images/placeholder.png",
             url: "https://organization-three.com",
         },
         {
             name: "Organization One",
-            logo: "https://placehold.co/600x400",
+            logo: "/images/placeholder.png",
             url: "https://organization-one.com",
         },
         {
             name: "Organization Two",
-            logo: "https://placehold.co/600x400",
+            logo: "/images/placeholder.png",
             url: "https://organization-two.com",
         },
         {
             name: "Organization Three",
-            logo: "https://placehold.co/600x400",
+            logo: "/images/placeholder.png",
             url: "https://organization-three.com",
         },
         {
             name: "Organization Two",
-            logo: "https://placehold.co/600x400",
+            logo: "/images/placeholder.png",
             url: "https://organization-two.com",
         },
         {
             name: "Organization Three",
-            logo: "https://placehold.co/600x400",
+            logo: "/images/placeholder.png",
             url: "https://organization-three.com",
         },
         {
             name: "Organization One",
-            logo: "https://placehold.co/600x400",
+            logo: "/images/placeholder.png",
             url: "https://organization-one.com",
         },
         {
             name: "Organization Two",
-            logo: "https://placehold.co/600x400",
+            logo: "/images/placeholder.png",
             url: "https://organization-two.com",
         },
         // Thêm các tổ chức khác tại đây

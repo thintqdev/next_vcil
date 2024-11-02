@@ -2,122 +2,21 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 
 import BlogHome from "./Blogs/HomeBlog";
-import { TabContent, Tabs } from "./HistoryAndAchievement";
+import HistoryAndAchievement, {
+  TabContent,
+  Tabs,
+} from "./HistoryAndAchievement";
+import Definition from "./Home/Definition";
+import UpcomingProject from "./Home/UpcomingProject";
 import OrganizationsList from "./Organizations/List";
 import ProjectSlider from "./UpcomingProject";
 
 export default function Main() {
-  const projects = [
-    {
-      title: 'Project 1',
-      description: 'This is a description for project 1.',
-      imageSrc: '/images/placeholder.png',
-    },
-    {
-      title: 'Project 2',
-      description: 'This is a description for project 2.',
-      imageSrc: '/images/placeholder.png',
-    },
-    {
-      title: 'Project 3',
-      description: 'This is a description for project 3.',
-      imageSrc: '/images/placeholder.png',
-    },
-    {
-      title: 'Project 4',
-      description: 'This is a description for project 4.',
-      imageSrc: '/images/placeholder.png',
-    },
-  ];
   return (
     <div className="grotesk max-w-8xl mx-auto">
       <section className="w-full text-black">
-        {/* <div className="max-w-8xl mx-auto inline-block items-center p-3 pt-0 lg:flex lg:flex-wrap lg:pt-4">
-          <div className="lg:w-3/6">
-            <h2 className="max-w-xl lg:text-[4.2em] text-3xl font-bold leading-none text-black inline-block">
-              Vel quis feugiat pharetra diam.
-            </h2>
-
-            <p className="mt-6 max-w-2xl text-xl font-semibold text-[#404040]">
-              Lorem ipsum urna, consectetur adipiscing elit. Urna risus
-              hendrerit dignissim duis fringilla sit. Lacus porttitor neque
-              ipsum.
-            </p>
-          </div>
-          <div className="mb-20 mt-44 hidden w-full flex-col lg:mt-12 lg:inline-block lg:w-3/6">
-            <img src="/images/placeholder.png" alt="Hero" />
-          </div>
-          <div className="my-20 inline-block w-full flex-col lg:mt-0 lg:hidden lg:w-2/5">
-            <img src="/images/placeholder.png" alt="image" />
-          </div>
-        </div> */}
-        <div className="my-3 flex w-full flex-col text-left lg:text-center">
-          <h2 className="bold mb-8 text-4xl font-bold leading-tight text-black lg:text-6xl">
-            Upcoming Project
-          </h2>
-        </div>
-        <ProjectSlider projects={projects} />
-        <div className="mt-0 bg-white lg:mt-20">
-          <div className="mx-auto">
-
-          </div>
-          <div className="text-black">
-            <div
-              className="
-              max-w-9xl
-              mx-auto
-              flex
-              flex-col
-              items-center
-              justify-center
-              px-5
-            "
-            >
-              <div className="mr-0 mb-6 w-full py-4 text-center lg:w-2/3">
-                <h2 className="mb-4 text-4xl font-bold sm:text-5xl">
-                  What is Vcil?
-                </h2>
-                <p className="mb-4 text-lg leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum sit amet mattis ante. Sed nec metus sit amet nunc
-                  consectetur luctus. Vestibulum sit amet mattis ante. Sed nec
-                  metus sit amet nunc consectetur luctus.
-                </p>
-                <a href="/" className="underline-blue font-semibold">
-                  Learn more
-                </a>
-              </div>
-              <img
-                className="
-                lg:w-5/7
-                mb-40
-                hidden
-                w-5/6
-                rounded object-cover
-                object-center
-                lg:inline-block 
-                lg:w-4/6
-              "
-                src="/images/placeholder.png"
-                alt="img"
-              />
-
-              <img
-                className="
-              mb-24
-              inline-block
-              w-5/6
-              rounded
-              object-cover object-center
-              lg:hidden
-              lg:w-4/6 
-            "
-                src="/images/placeholder.png"
-                alt="img"
-              />
-            </div>
-          </div>
-        </div>
+        <UpcomingProject />
+        <Definition />
         {/* <div className="mx-auto px-5 pt-32 pb-24 lg:px-24">
           <div className="my-3 flex w-full flex-col text-left lg:text-center">
             <h2 className="bold mb-8 text-4xl font-bold leading-tight text-black lg:text-6xl">
@@ -147,35 +46,45 @@ export default function Main() {
             </a>
           </div>
         </div> */}
-        <div className="mx-auto px-5 pt-32 pb-24 lg:px-24">
+        {/* <div className="mx-auto px-5 pb-24 pt-32 lg:px-24">
           <div className="my-3 flex w-full flex-col text-left lg:text-center">
-            <h2 className="bold mb-8 text-4xl font-bold leading-tight text-black lg:text-6xl">
+            <h2
+              className="bold mb-8 transform text-4xl font-bold leading-tight text-black 
+      transition-all duration-300 hover:scale-105 lg:text-6xl"
+            >
               History And Achievement
             </h2>
           </div>
           <Tabs>
             <TabContent label="History">
-              <div className="flex w-full flex-col text-left lg:text-center">
-                <h3 className="text-2xl text-black">
-                  Lorem ipsum arcu, consectetur adipiscing elit. Viverra elementum
-                  pellentesque <br className="hidden lg:inline-block" />
-                  tortor, luctus blandit sed dolor et, semper. Posuere vitae vitae,
-                  ac mus. Arcu quis feugiat.
+              <div
+                className="flex w-full transform flex-col text-left 
+        transition-all duration-500 ease-in-out lg:text-center"
+              >
+                <h3
+                  className="text-2xl text-black opacity-90 transition-all
+          duration-300 hover:opacity-100"
+                >
+                  History
                 </h3>
               </div>
             </TabContent>
             <TabContent label="Achievement">
-              <div className="flex w-full flex-col text-left lg:text-center">
-                <h3 className="text-2xl text-black">
-                  Lorem ipsum arcu, consectetur adipiscing elit. Viverra elementum
-                  pellentesque <br className="hidden lg:inline-block" />
-                  tortor, luctus blandit sed dolor et, semper. Posuere vitae vitae,
-                  ac mus. Arcu quis feugiat.
+              <div
+                className="flex w-full transform flex-col text-left
+        transition-all duration-500 ease-in-out lg:text-center"
+              >
+                <h3
+                  className="text-2xl text-black opacity-90 transition-all
+          duration-300 hover:opacity-100"
+                >
+                  Achievement
                 </h3>
               </div>
             </TabContent>
           </Tabs>
-        </div>
+        </div> */}
+        <HistoryAndAchievement />
         <BlogHome />
         <OrganizationsList />
         {/* <div className="invisible mx-auto flex max-w-6xl p-3 pb-32 lg:visible lg:px-2">

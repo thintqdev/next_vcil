@@ -78,7 +78,7 @@ const menuItems = [
       },
     ],
   },
-  { title: "Journal", link: "/journal" },
+  { title: "Journals", link: "/journals" },
   { title: "Publications", link: "/publications" },
 ];
 

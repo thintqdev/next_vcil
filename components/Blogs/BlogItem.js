@@ -13,7 +13,7 @@ const BlogItem = ({ title, image, description }) => {
                         width={500}
                         height={300}
                         objectFit='cover'
-                    />
+                    />      
                 </div>
                 <div className="lg:w-1/2 lg:pl-6">
                     <h2 className="text-3xl font-bold mb-4">{title}</h2>

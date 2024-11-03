@@ -1,23 +1,19 @@
 import BlogItem from "./BlogItem";
+import { useState, useEffect } from "react";
+import { getImageUrl } from "../../utils";
 
 const BlogHome = () => {
-    const blogs = [
-        {
-            title: "Bibendum tortor et sit convallis nec morbi",
-            image: "/images/placeholder.png",
-            description: "Lorem ipsum auctor sit amet, consectetur adipiscing elit. Sit a egestas tortor viverra nisl, in non...",
-        },
-        {
-            title: "Eu diam in magna blandit sit magna dolor proin velit",
-            image: "/images/placeholder.png",
-            description: "Lorem ipsum ac neque, consectetur adipiscing elit. Nibh neque, ut purus donec sed donec semper ac vestibulum...",
-        },
-        {
-            title: "Viverra enim diam gravida risus nisl",
-            image: "/images/placeholder1.png",
-            description: "Lorem ipsum accumsan arcu, consectetur adipiscing elit. Sed eget enim vel...",
-        },
-    ];
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() => {
+        const apiUrl = process.env.NEXT_PUBLIC_APP_API_URL;
+        fetch(`${apiUrl}/blogs?populate=*`)
+            .then(response => response.json())
+            .then(data => {
+                setBlogs(data.data.slice(0, 3))
+            })
+            .catch(error => console.error('Error fetching blogs:', error));
+    }, []);
 
     return (
         <div className="container mx-auto px-5 py-10">
@@ -30,9 +26,9 @@ const BlogHome = () => {
                 {blogs.map((blog, index) => (
                     <BlogItem
                         key={index}
-                        title={blog.title}
-                        image={blog.image}
-                        description={blog.description}
+                        title={blog?.attributes?.title}
+                        image={getImageUrl(blog.image.url)}
+                        description={blog.description[0].children[0].text}
                     />
                 ))}
             </div>

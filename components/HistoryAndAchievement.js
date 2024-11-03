@@ -68,7 +68,6 @@ export default function HistoryAndAchievement() {
 
         const historyJson = await historyRes.json();
         const achievementJson = await achievementRes.json();
-        console.log(historyJson.data?.[0]?.description);
 
         setHistoryData(historyJson.data?.[0]?.description);
         setAchievementData(achievementJson.data?.[0]?.description);
